@@ -52,39 +52,45 @@ function App() {
               Copy
             </button>
           </div>
-          <div>
-            <input
-              type="range"
-              min={8}
-              max={24}
-              name=""
-              id=""
-              value={length}
-              onChange={(e) => setLength(e.target.value)}
-            />
-            <label htmlFor="">Length: {length} </label>
-            <input
-              type="checkbox"
-              name="numbers"
-              id="numbers"
-              className="ml-1"
-              defaultChecked={numberChecked}
-              onChange={() => {
-                setNumberChecked((prev) => !prev);
-              }}
-            />
-            <label htmlFor="numbers">Numbers</label>
-            <input
-              type="checkbox"
-              name="characters"
-              id="characters"
-              className="ml-1"
-              defaultChecked={charChecked}
-              onChange={() => {
-                setCharChecked((prev) => !prev);
-              }}
-            />
-            <label htmlFor="characters">Characters</label>
+          <div className="flex flex-col md:flex-row justify-center items-center">
+            <div>
+              <input
+                type="range"
+                min={8}
+                max={24}
+                name=""
+                id=""
+                value={length}
+                onChange={(e) => setLength(e.target.value)}
+              />
+              <label htmlFor="">Length: {length} </label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="numbers"
+                id="numbers"
+                className="ml-1"
+                defaultChecked={numberChecked}
+                onChange={() => {
+                  setNumberChecked((prev) => !prev);
+                }}
+              />
+              <label htmlFor="numbers">Numbers</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="characters"
+                id="characters"
+                className="ml-1"
+                defaultChecked={charChecked}
+                onChange={() => {
+                  setCharChecked((prev) => !prev);
+                }}
+              />
+              <label htmlFor="characters">Characters</label>
+            </div>
           </div>
         </div>
       </div>
